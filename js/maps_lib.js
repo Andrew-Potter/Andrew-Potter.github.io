@@ -79,7 +79,6 @@
     };
 
     //-----custom functions-----
-  
     //-----end of custom functions-----
 
     MapsLib.prototype.submitSearch = function (whereClause, map) {
