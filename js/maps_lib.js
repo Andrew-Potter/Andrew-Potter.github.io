@@ -79,6 +79,10 @@
     };
 
     //-----custom functions-----
+    google.maps.event.addListener(marker, 'dragend', function() {
+    updateMarkerStatus('Drag ended');
+    geocodePosition(marker.getPosition());
+  });
     //-----end of custom functions-----
 
     MapsLib.prototype.submitSearch = function (whereClause, map) {
