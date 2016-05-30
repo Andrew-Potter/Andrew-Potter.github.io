@@ -79,6 +79,27 @@
     };
 
     //-----custom functions-----
+var geocoder;
+var map;
+var marker;
+var infowindow = new google.maps.InfoWindow({
+  size: new google.maps.Size(150, 50)
+});
+
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(35.7714658,-78.628525);
+  var mapOptions = {
+    zoom: 8,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  google.maps.event.addListener(map, 'click', function() {
+    infowindow.close();
+  });
+}
+
 function geocodePosition(pos) {
   geocoder.geocode({
     latLng: pos
