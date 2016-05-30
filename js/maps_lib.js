@@ -79,13 +79,6 @@
     };
 
     //-----custom functions-----
-    var geocoder;
-var map;
-var marker;
-var infowindow = new google.maps.InfoWindow({
-  size: new google.maps.Size(150, 50)
-});
-
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(-34.397, 150.644);
