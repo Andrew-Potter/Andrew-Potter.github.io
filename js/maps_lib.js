@@ -88,7 +88,7 @@ var infowindow = new google.maps.InfoWindow({
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(35.7714658,-78.628525);
   var mapOptions = {
     zoom: 8,
     center: latlng,
